@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="690d797ec3935210fc99f3ddd4013182" label="Training Registration" max_length="40" name="x_1546361_traini_0_training_registration" type="collection">
+        <element label="Training Name" max_length="32" name="training_name" reference="x_1546361_traini_0_trainings" type="reference"/>
+        <element choice="1" label="Enrollment status" max_length="40" name="enrollment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="3"/>
+                <element inactive_on_update="false" label="Reproved" sequence="2" value="4"/>
+            </choice>
+        </element>
+        <element label="Student Name" max_length="40" name="student_name" type="string"/>
+        <element label="Training Date" max_length="32" name="training_date" reference="x_1546361_traini_0_training_schedule" type="reference"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="x_1546361_traini_0_training_schedule" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="instructor"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index3">
+            <element name="training_date"/>
+        </index>
+        <index name="index4">
+            <element name="training_name"/>
+        </index>
+    </element>
+</database>

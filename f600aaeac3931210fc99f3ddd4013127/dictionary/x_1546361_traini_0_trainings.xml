@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cc3839f6c3935210fc99f3ddd40131df" label="Trainings" max_length="40" name="x_1546361_traini_0_trainings" type="collection">
+        <element label="Translated description" max_length="1000" name="translated_description" type="string"/>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element display="true" label="Training Title" max_length="40" name="training_title" type="string"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
